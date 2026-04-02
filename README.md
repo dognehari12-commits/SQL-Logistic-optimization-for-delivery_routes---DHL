@@ -58,6 +58,10 @@ HAVING COUNT(*) > 1;
 
 👉 📸 Add Screenshot Below:
 
+<img width="877" height="684" alt="Screenshot 2026-04-01 231345" src="https://github.com/user-attachments/assets/5c407d82-b21c-4981-8f9b-dde52a2a513e" />
+
+
+
 
 🧾 SQL Query:
 SELECT Route_ID, ROUND(AVG(Delay_Hours),2) AS Avg_Delay
@@ -70,6 +74,8 @@ LIMIT 10;
 📌 Insight: Standard deliveries show higher delays than Express
 
 👉 📸 Add Screenshot Below:
+
+<img width="1147" height="590" alt="Screenshot 2026-04-01 231059" src="https://github.com/user-attachments/assets/15e4d7bf-f3b4-4725-84a6-2ab510657f2f" />
 
 
 🧾 SQL Query:
