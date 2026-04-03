@@ -46,11 +46,15 @@ The project uses multiple relational tables:
 - Ensured referential integrity across tables
 
 ### 🧾 Sample SQL Query:
-```sql
+sql
 SELECT Order_ID, COUNT(*)
 FROM dhl_orders
 GROUP BY Order_ID
 HAVING COUNT(*) > 1;
+
+
+
+
 📊 Exploratory Data Analysis (EDA)
 🔹 1. Top Delayed Routes
 
@@ -60,7 +64,7 @@ HAVING COUNT(*) > 1;
 
 <img width="877" height="684" alt="Screenshot 2026-04-01 231345" src="https://github.com/user-attachments/assets/5c407d82-b21c-4981-8f9b-dde52a2a513e" />
 
-<img width="1147" height="590" alt="Screenshot 2026-04-01 231059" src="https://github.com/user-attachments/assets/61550c84-5c89-4d39-a7d5-605a67f5fb27" />
+
 
 
 
@@ -97,6 +101,7 @@ SELECT Warehouse_ID, COUNT(*) AS Total_Shipments,
 SUM(CASE WHEN Delay_Hours > 0 THEN 1 ELSE 0 END) AS Delayed
 FROM dhl_shipments
 GROUP BY Warehouse_ID;
+
 🔹 4. Delivery Agent Performance
 
 📌 Insight: Identified agents with <85% on-time delivery
@@ -109,11 +114,39 @@ SELECT Agent_ID,
 ROUND(SUM(CASE WHEN Delay_Hours=0 THEN 1 ELSE 0 END)*100.0/COUNT(*),2) AS On_Time_Percentage
 FROM dhl_shipments
 GROUP BY Agent_ID;
-🔹 5. Delay Distribution
+
+
+
+Delay Distribution
 
 📌 Insight: Most delays fall under minor and moderate categories
 
 👉 📸 Add Screenshot Below:
+
+
+## Key Insights
+
+Standard deliveries have higher delays than Express
+Few routes contribute to majority of delays
+Overloaded warehouses increase delivery time
+Low-performing agents impact SLA
+
+🚀 Business Recommendations
+Implement dynamic route optimization
+Balance load across warehouses
+Train low-performing delivery agents
+Use real-time monitoring dashboards
+
+📽 Project Resources
+📄 PPT Presentation: (Add your link here)
+🎥 Video Explanation: (Add your link here)
+
+👨‍💻 Author
+
+Harivansh Dogne
+Data Analyst | SQL | Power BI
+
+
 📈 Key Insights
 Standard deliveries have higher delays than Express
 Few routes contribute to majority of delays
